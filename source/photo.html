@@ -133,7 +133,7 @@
   <main class="photo-page-main">
     <section class="photos">
       <h2 class="visually-hidden">Фотографии</h2>
-      <p class="photos__slogan photos__slogan--top container">Взгляните на фотографии, которые выкладывают пользователи!<br> Видите, как не хватает ваших?</p>
+      <p class="photos__slogan photos__slogan--top">Взгляните на фотографии, которые выкладывают пользователи!<br> Видите, как не хватает ваших?</p>
       <ul class="main-photo">
         <li class="main-photo__item">
           <a class="main-photo__link" href="#">
@@ -295,7 +295,7 @@
           </li>
         </ul>
       </div>
-      <p class="photos__slogan photos__slogan--bottom container">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
+      <p class="photos__slogan photos__slogan--bottom">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
     </section>
     <section class="photo-editor container">
       <h2 class="visually-hidden">Редактор фотографии</h2>
@@ -310,7 +310,7 @@
         <div class="editor-form__wrapper instruments">
           <ul class="instruments__list editor-list">
             <li class="instruments__item">
-              <input class="visually-hidden" type="checkbox" name="crop" id="filter-crop" checked>
+              <input class="visually-hidden" type="radio" value="crop" name="crop" id="filter-crop" checked>
               <label class="instruments__label" for="filter-crop">
                 <svg class="instruments__img instruments__img--active instruments__img--crop"  width="44" height="44">
                   <use xlink:href="#crop"></use>
@@ -319,7 +319,7 @@
               </label>
             </li>
             <li class="instruments__item">
-              <input class="visually-hidden" type="checkbox" name="fill-color" id="filter-fill">
+              <input class="visually-hidden" type="radio" value="fill" name="fill-color" id="filter-fill">
               <label class="instruments__label" for="filter-fill">
                 <svg class="instruments__img instruments__img--fill" width="48px" height="43px">
                   <use xlink:href="#fill"></use>
@@ -328,7 +328,7 @@
               </label>
             </li>
             <li class="instruments__item">
-              <input class="visually-hidden" type="checkbox" name="contrast" id="filter-contrast">
+              <input class="visually-hidden" type="radio" value="contrast" name="contrast" id="filter-contrast">
               <label class="instruments__label" for="filter-contrast">
                 <svg class="instruments__img instruments__img--contrast" width="32px" height="32px">
                   <use xlink:href="#contrast"></use>
