@@ -5,6 +5,11 @@
   background-image: url("../img/iphone-hand-mobile@1x.png");
   background-position: 0 107px;
   background-repeat: no-repeat;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/iphone-hand-mobile@2x.png");
+    background-size: 258px auto;
+  }
 }
 
 .availability__container {
@@ -67,6 +72,11 @@
     margin: 0 auto;
     background-image: url("../img/iphone-hand-tablet@1x.png");
     background-position: -21px 71px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/iphone-hand-tablet@2x.png");
+      background-size: 700px auto;
+    }
   }
 
   .availability__slogan {
@@ -109,6 +119,11 @@
     padding: 0 10px;
     background-image: url("../img/iphone-hand-desktop@1x.png");
     background-position: 25px 102px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/iphone-hand-desktop@2x.png");
+      background-size: 1050px auto;
+    }
   }
 
   .availability__slogan {
