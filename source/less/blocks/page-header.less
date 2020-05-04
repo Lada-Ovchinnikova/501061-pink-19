@@ -1,12 +1,11 @@
 .page-header {
+  display: flex;
+  flex-direction: column;  
   width: 320px;
   margin: 0 auto;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: 320px auto;
-  
-  display: flex;
-  flex-direction: column;
 
   &--closed {
     background-position: center 0;
@@ -141,6 +140,7 @@
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg");
+      
     }
   }
 
@@ -199,7 +199,6 @@
     width: 940px;
     margin: 0 auto;
     padding: 0 10px;
-    background-color: red;
   }
 
   .page-header__wrapper {
