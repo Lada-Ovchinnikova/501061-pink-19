@@ -1,0 +1,136 @@
+.achivments {
+  background-color: #f2f2f2;
+}
+
+.achivments__title {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0 25px;
+}
+
+// .achivments__option input[type="checkbox"]:focus + label::before {
+//   outline: rgb(59, 153, 252) auto 5px;
+// }
+
+.achivments__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.achivments__option {
+  margin-bottom: 42px;
+  padding: 5px 70px;
+  padding-right: 0;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.achivments__option:last-child {
+  margin-bottom: 40px;
+}
+
+.achivments__option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.achivments__input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -71px;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #e5e5e5;
+  border-radius: 3px;
+  background-color: #ffffff;
+}
+
+.achivments__input-checkbox + label:hover::before {
+  border-color: #000000;
+}
+
+.achivments__input-checkbox + label:active::before {
+  border-color: #d22856;
+}
+
+.achivments__input-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -63px;
+  width: 22px;
+  height: 16px;
+  background-image: url("../img/icon-form-yes.svg");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .achivments {
+    position: relative;
+    margin-bottom: 65px;
+    padding: 50px 60px;
+    padding-bottom: 10px;
+    border: solid 2px #e5e5e5;
+    border-radius: 3px;
+    background-color: #ffffff;
+  }
+
+  .achivments__title {
+    position: absolute;
+    top: -18px;
+    left: 90px;
+    display: inline-block;
+    padding: 0 30px;
+    text-align: center;
+    background-color: #ffffff;
+  }
+
+  .achivments__option {
+    padding-left: 60px;
+  }
+
+  .achivments__input-checkbox + label::before {
+    left: -61px;
+  }
+
+  .achivments__input-checkbox:checked + label::after {
+    top: 5px;
+    left: -53px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .achivments__title {
+    left: 250px;
+  }
+
+  .achivments {
+    width: 940px;
+    padding: 50px 60px;
+    padding-bottom: 10px;
+  }
+
+  .achivments__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-height: 175px;
+  }
+
+  .achivments__option {
+    margin-right: 55px;
+    padding-left: 60px;
+  }
+
+  .achivments__input-checkbox + label::before {
+    left: -62px;
+  }
+
+  .achivments__input-checkbox:checked + label::after {
+    left: -53px;
+  }
+}

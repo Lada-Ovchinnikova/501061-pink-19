@@ -1,0 +1,165 @@
+.scrol {
+  margin-bottom: 40px;
+}
+
+.scrol__item  {
+  position: relative;
+  left: 0;
+  width: 280px;
+  height: 37px;
+  margin: 0 auto;
+  padding-top: 34px;
+  padding-bottom: 0;
+}
+
+.scrol__item::after {
+  content: "";
+  left: -20px;
+  bottom: 0;
+  position: absolute;
+  width: 318px;
+  border: solid 0.5px #283645;
+  opacity: 0.1;
+}
+
+.scrol__fill,
+.scrol__contrast {
+  display: none;
+}
+
+.scrol__scale {
+  width: 240px;
+  height: 2px;
+  margin: 0 20px;
+  background: #283645;
+}
+.scrol__toggle-crop {
+  position: absolute;
+  top: 29px;
+  left: 212px;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  background-color: #ffffff;
+  border: solid 2px #d22856;
+  border-radius: 50px;
+}
+
+.scrol__toggle-crop:active {
+  background-color: #d22856;
+}
+
+@media (min-width: @tablet-width) {
+  .scrol {
+    margin-bottom: 40px;
+  }
+
+  .scrol__item {
+    left: 0;
+    width: 250px;
+    height: 48px;
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
+  }
+
+  .scrol__item::after {
+    left: -25px;
+    width: 273px;
+  }
+
+  .scrol__fill,
+  .scrol__contrast {
+    display: block;
+  }
+
+  .scrol__scale {
+    position: relative;
+    top: 10px;
+    width: 200px;
+    height: 2px;
+    margin: 0 20px;
+    margin-left: 30px;
+    padding-right: 0;
+  }
+
+  .scrol__toggle-crop,
+  .scrol__toggle-fill,
+  .scrol__toggle-contrast {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    background-color: #ffffff;
+    border: solid 2px #d22856;
+    border-radius: 50px;
+  }
+
+  .scrol__toggle-crop {
+    left: 175px;
+  }
+
+  .scrol__toggle-fill {
+    left: 55px;
+  }
+
+  .scrol__toggle-contrast {
+    left: 125px;
+  }
+
+  .scrol__toggle-fill:active,
+  .scrol__toggle-contrast:active {
+    background-color: #d22856;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .scrol {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .scrol__item  {
+    width: 365px;
+    height: 60px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .scrol__item::after {
+    left: -50px;
+    width: 410px;
+  }
+
+  .scrol__contrast {
+    margin-bottom: 17px;
+  }
+
+  .scrol__scale {
+    top: 23px;
+    left: 42px;
+    width: 290px;
+    margin: 0;
+  }
+
+  .scrol__toggle-crop,
+  .scrol__toggle-fill,
+  .scrol__toggle-contrast {
+    top: 17px;
+  }
+
+  .scrol__toggle-crop {
+    left: 114px;
+  }
+
+  .scrol__toggle-fill {
+    left: 290px;
+  }
+
+  .scrol__toggle-contrast {
+    left: 203px;
+  }
+}

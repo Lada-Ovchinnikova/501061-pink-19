@@ -1,0 +1,79 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__personal-info {
+  margin-bottom: 25px;
+  padding: 0 20px;
+}
+
+.form__achivments {
+  margin-bottom: 30px;
+  padding: 0 20px;
+  padding-top: 40px;
+}
+
+.form__contacts-info {
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.form__app {
+  margin-bottom: 27px;
+  padding: 10px 20px;
+  padding-top: 25px;
+}
+
+.form__comments {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+.form__title {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  text-align: center;
+  color:#d22856;
+  text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .form__personal-information {
+    order: 0;
+  }
+
+  .form__achivments {
+    order: 3;
+  }
+
+  .form__contacts-info {
+    order: 2;
+  }
+
+  .form__app{
+    order: 1;
+  }
+
+  .form__comments {
+    order: 4;
+  }
+
+  .form__submit {
+    order: 5;
+  }
+
+  .form__title {
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
