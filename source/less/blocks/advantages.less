@@ -32,7 +32,7 @@
 .advantages__item {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   text-align: center;
   overflow: hidden;
 }
@@ -69,6 +69,7 @@
 .advantages__image {
   position: relative;
   top: 45px;
+  left: 63px;
   display: block;
 }
 
@@ -111,7 +112,6 @@
 
   .advantages__item {
     position: relative;
-    align-items: flex-start;
     text-align: left;
     overflow: visible;
   }
@@ -127,6 +127,7 @@
   }
 
   .advantages__description {
+    width: 310px;
     margin-bottom: 35px;
   }
 }
@@ -146,6 +147,7 @@
   }
 
   .advantages__container {
+    flex-direction: column;
     padding-top: 0;
   }
 
@@ -170,15 +172,13 @@
   .advantages__list {
     display: flex;
     justify-content: space-around;
-    min-width: 960px;
+    width: 960px;
     margin: 0 auto;
     padding: 0 10px;
   }
 
   .advantages__item {
-    flex-wrap: wrap;
-    align-items: center;
-    max-width: 291px;
+    width: 291px;
   }
 
   .advantages__title {
@@ -190,6 +190,7 @@
   }
 
   .advantages__description {
+    width: 240px;
     margin-bottom: 0;
     padding: 0 25px;
     font-size: 18px;
