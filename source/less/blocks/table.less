@@ -11,11 +11,13 @@
 
 .table__wrapper {
   display: flex;
-  justify-content: center;
   overflow: hidden;
+  width: 320px;
 }
 
 .table__item {
+  position: relative;
+  right: 78.5%;
   margin: 0;
   margin-bottom: 30px;
   padding: 0;
@@ -46,6 +48,7 @@
   }
 
   .table__item {
+    position: static;
     padding-bottom: 0;
   }
 
@@ -62,8 +65,10 @@
 
 @media (min-width: @desktop-width) {
   .table {
+    margin: 0;
     margin-bottom: 65px;
-    padding-top: 105px;
+    padding-top: 90px;
+    background-image: url("../img/bg-triangle-white-desktop.svg");
   }
 
   .table__wrapper {
