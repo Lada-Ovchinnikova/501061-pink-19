@@ -7,14 +7,14 @@ var rename = require("gulp-rename");
 var less = require("gulp-less");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
-//var csso = require("gulp-csso");
+var csso = require("gulp-csso");
 var imagemin = require("gulp-imagemin");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
 var server = require("browser-sync").create();
-
+var htmlreplace = require("gulp-html-replace");
 var webp = require("gulp-webp");
 
 gulp.task("css", function () {
@@ -25,8 +25,8 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
-    //.pipe(csso())
-    //.pipe(rename("style.min.css"))
+    .pipe(csso())
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
@@ -34,12 +34,11 @@ gulp.task("css", function () {
 
 gulp.task("server", function () {
   server.init({
-    server: "build/"
-    //,
-    // notify: false,
-    // open: true,
-    // cors: true,
-    // ui: false
+    server: "build/",
+    notify: false,
+    open: true,
+    cors: true,
+    ui: false
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
@@ -69,6 +68,16 @@ gulp.task("webp", function () {
     .pipe(gulp.dest("bulid/img"))
 });
 
+
+ 
+gulp.task('replace', function() {
+  return gulp.src('build/*.html')
+    .pipe(htmlreplace({
+        'css': 'css/style.min.css'
+    }))
+    .pipe(gulp.dest('build/'));
+});
+
 gulp.task("sprite", function () {
   return gulp.src("source/img/icon-*.svg")
     .pipe(svgstore({
@@ -86,12 +95,15 @@ gulp.task("html", function () {
     .pipe(gulp.dest("build"));
 });
 
+
+
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/**",
-    "source/*.ico"
+    "source/*.ico",
+    "source/css/normalize.css"
   ], {
     base: "source"
   })
@@ -102,5 +114,6 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
+//gulp.task("build", gulp.series("clean", "copy", "replace", "css", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", "replace"));
 gulp.task("start", gulp.series("build", "server"));

@@ -70,18 +70,15 @@
   background-color: transparent;
 }
 
-.page-header__toggle-burger,
-.page-header__toggle-cross {
+.page-header__toggle > svg {
   fill: #ffffff;
 }
 
-.page-header__toggle-burger:hover,
-.page-header__toggle-cross:hover {
+.page-header__toggle:hover > svg {
   fill: #d22856;
 }
 
-.page-header__toggle-cross:active,
-.page-header__toggle-burger:active {
+.page-header__toggle:active > svg {
   opacity: 0.3;
 }
 
@@ -185,7 +182,7 @@
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-position: center 0;
-    background-size: cover;
+    background-size: auto;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
