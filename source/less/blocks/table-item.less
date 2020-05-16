@@ -1,3 +1,6 @@
+.table__item--description {
+  display: none;
+}
 
 .table-item__heading {
   padding-top: 15px;
@@ -60,7 +63,13 @@
 }
 
 @media (min-width: @tablet-width) {
-  .table__item--description .table-item__content {
+  .table-item--description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .table-item--description .table-item__content {
     display: block;
     width: 125px;
     height: auto;
@@ -68,14 +77,29 @@
     padding-bottom: 5px;
   }
 
-  .table__item--description .table-item__content:first-child {
+  .table-item--description .table-item__content:first-child {
     border-top: solid 2px #e5e5e5;
+    border-top-left-radius: 3px;
   }
 
-  .table__item--description .table-item__option {
+  .table-item--description .table-item__content:last-child {
+    border-bottom-left-radius: 3px;
+  }
+
+  .table-item--description .table-item__option {
     display: block;
     margin-right: 0;
     text-transform: capitalize;
+  }
+
+  .table-item--last-column .table-item__heading {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  .table-item--first-column .table-item__heading {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
   }
 
   .table-item__heading {
@@ -111,13 +135,13 @@
 }
 
 @media (min-width: @desktop-width) {
-  .table__item--description .table-item__content {
+  .table-item--description .table-item__content {
     width: 195px;
     padding: 15px 20px;
     padding-bottom: 15px;
   }
 
-  .table__item--description .table-item__option {
+  .table-item--description .table-item__option {
     font-size: 18px;
   }
 
