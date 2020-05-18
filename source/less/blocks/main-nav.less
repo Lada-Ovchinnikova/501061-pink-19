@@ -1,5 +1,14 @@
 .main-nav {
+  position: relative;
   background-color: @bg-darkblue;
+}
+
+.main-nav::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border: solid .5px #000000;
+  top: -1px;
 }
 
 .main-nav__list {

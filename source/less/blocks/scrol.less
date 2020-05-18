@@ -1,5 +1,16 @@
 .scrol {
+  position: relative;
+  width: 100%;
   margin-bottom: 40px;
+}
+
+.scrol::after {
+  content: "";
+  bottom: 0;
+  position: absolute;
+  width: 100vw;
+  border: solid 0.5px #283645;
+  opacity: 0.1;
 }
 
 .scrol__item {
@@ -10,16 +21,6 @@
   margin: 0 auto;
   padding-top: 34px;
   padding-bottom: 0;
-}
-
-.scrol__item::after {
-  content: "";
-  left: -20px;
-  bottom: 0;
-  position: absolute;
-  width: 318px;
-  border: solid 0.5px #283645;
-  opacity: 0.1;
 }
 
 .scrol__value-crop,
@@ -58,21 +59,31 @@
 
 @media (min-width: @tablet-width) {
   .scrol {
+    width: auto;
     margin-bottom: 40px;
+  }
+
+  .scrol::after {
+    display: none;
   }
 
   .scrol__item {
     left: 0;
-    width: 250px;
-    height: 48px;
+    width: 247px;
+    height: 47px;
     margin: 0;
     margin-bottom: 25px;
     padding: 0;
   }
 
   .scrol__item::after {
+    content: "";
+    position: absolute;
     left: -25px;
+    bottom: 0;
     width: 273px;
+    border: solid 0.5px #283645;
+    opacity: 0.1;
   }
 
   .scrol__fill,
@@ -138,6 +149,7 @@
 
   .scrol__item::after {
     left: -50px;
+    bottom: -5px;
     width: 410px;
   }
 
@@ -146,7 +158,7 @@
   }
 
   .scrol__scale {
-    top: 23px;
+    top: 28px;
     left: 42px;
     width: 290px;
     margin: 0;
@@ -155,7 +167,7 @@
   .scrol__toggle-crop,
   .scrol__toggle-fill,
   .scrol__toggle-contrast {
-    top: 17px;
+    top: 22px;
   }
 
   .scrol__toggle-crop {

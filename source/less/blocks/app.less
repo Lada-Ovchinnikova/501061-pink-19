@@ -3,13 +3,16 @@
 }
 
 .app__title {
+  width: 280px;
+  margin: 0 auto;
   margin-bottom: 35px;
   padding: 0 20px;
 }
 
 .app__list {
-  margin: 0;
-  padding: 0;
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
   list-style: none;
 }
 
@@ -53,9 +56,13 @@
   border-color: #d22856;
 }
 
-// .app__option input[type="radio"]:focus + label::before {
-//   outline: rgb(59, 153, 252) auto 5px;
-// }
+.app__option input[type="radio"]:focus + label::before {
+  outline: rgb(59, 153, 252) auto 5px;
+}
+
+.app__option input[type="radio"]:disabled + label::before {
+  background-color: #e5e5e5;
+}
 
 .app__input-radio:checked + label::after {
   content: "";
@@ -84,10 +91,16 @@
     top: -15px;
     left: 123px;
     display: inline-block;
+    width: auto;
     margin-top: 0;
     margin-bottom: 0;
     padding: 0 25px;
     background-color: #ffffff;
+  }
+
+  .app__list {
+    width: auto;
+    padding: 0;
   }
 
   .app__option {

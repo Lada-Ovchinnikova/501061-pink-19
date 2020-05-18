@@ -3,18 +3,24 @@
 }
 
 .achivments__title {
-  margin: 0;
+  width: 250px;
+  margin: 0 auto;
   margin-bottom: 40px;
-  padding: 0 25px;
+  padding: 0 35px;
 }
 
-// .achivments__option input[type="checkbox"]:focus + label::before {
-//   outline: rgb(59, 153, 252) auto 5px;
-// }
+.achivments__option input[type="checkbox"]:focus + label::before {
+  outline: rgb(59, 153, 252) auto 5px;
+}
+
+.achivments__option input[type="checkbox"]:disabled + label::before {
+  background-color: #e5e5e5;
+}
 
 .achivments__list {
-  padding: 0;
-  margin: 0;
+  width: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
   list-style: none;
 }
 
@@ -84,9 +90,15 @@
     top: -18px;
     left: 90px;
     display: inline-block;
+    width: auto;
     padding: 0 30px;
     text-align: center;
     background-color: #ffffff;
+  }
+
+  .achivments__list {
+    width: auto;
+    padding: 0;
   }
 
   .achivments__option {
