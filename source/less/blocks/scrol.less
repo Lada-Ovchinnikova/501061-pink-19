@@ -1,10 +1,10 @@
-.scrol {
+.scroll {
   position: relative;
   width: 100%;
   margin-bottom: 40px;
 }
 
-.scrol::after {
+.scroll::after {
   content: "";
   bottom: 0;
   position: absolute;
@@ -13,7 +13,7 @@
   opacity: 0.1;
 }
 
-.scrol__item {
+.scroll__item {
   position: relative;
   left: 0;
   width: 280px;
@@ -23,25 +23,25 @@
   padding-bottom: 0;
 }
 
-.scrol__value-crop,
-.scrol__value-fill,
-.scrol__value-contrast {
+.scroll__value-crop,
+.scroll__value-fill,
+.scroll__value-contrast {
   display: none;
 }
 
-.scrol__fill,
-.scrol__contrast {
+.scroll__fill,
+.scroll__contrast {
   display: none;
 }
 
-.scrol__scale {
+.scroll__scale {
   width: 240px;
   height: 2px;
   margin: 0 20px;
   background: #283645;
 }
 
-.scrol__toggle-crop {
+.scroll__toggle-crop {
   position: absolute;
   top: 29px;
   left: 212px;
@@ -53,21 +53,21 @@
   border-radius: 50px;
 }
 
-.scrol__toggle-crop:active {
+.scroll__toggle-crop:active {
   background-color: #d22856;
 }
 
 @media (min-width: @tablet-width) {
-  .scrol {
+  .scroll {
     width: auto;
     margin-bottom: 40px;
   }
 
-  .scrol::after {
+  .scroll::after {
     display: none;
   }
 
-  .scrol__item {
+  .scroll__item {
     left: 0;
     width: 247px;
     height: 47px;
@@ -76,7 +76,7 @@
     padding: 0;
   }
 
-  .scrol__item::after {
+  .scroll__item::after {
     content: "";
     position: absolute;
     left: -25px;
@@ -86,12 +86,12 @@
     opacity: 0.1;
   }
 
-  .scrol__fill,
-  .scrol__contrast {
+  .scroll__fill,
+  .scroll__contrast {
     display: block;
   }
 
-  .scrol__scale {
+  .scroll__scale {
     position: relative;
     top: 10px;
     width: 200px;
@@ -101,9 +101,9 @@
     padding-right: 0;
   }
 
-  .scrol__toggle-crop,
-  .scrol__toggle-fill,
-  .scrol__toggle-contrast {
+  .scroll__toggle-crop,
+  .scroll__toggle-fill,
+  .scroll__toggle-contrast {
     position: absolute;
     top: 4px;
     left: 0;
@@ -115,70 +115,70 @@
     border-radius: 50px;
   }
 
-  .scrol__toggle-crop {
+  .scroll__toggle-crop {
     left: 175px;
   }
 
-  .scrol__toggle-fill {
+  .scroll__toggle-fill {
     left: 55px;
   }
 
-  .scrol__toggle-contrast {
+  .scroll__toggle-contrast {
     left: 125px;
   }
 
-  .scrol__toggle-fill:active,
-  .scrol__toggle-contrast:active {
+  .scroll__toggle-fill:active,
+  .scroll__toggle-contrast:active {
     background-color: #d22856;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .scrol {
+  .scroll {
     display: flex;
     flex-direction: column;
     margin-bottom: 0;
   }
 
-  .scrol__item {
+  .scroll__item {
     width: 365px;
     height: 60px;
     margin: 0;
     margin-bottom: 10px;
   }
 
-  .scrol__item::after {
+  .scroll__item::after {
     left: -50px;
     bottom: -5px;
     width: 410px;
   }
 
-  .scrol__contrast {
+  .scroll__contrast {
     margin-bottom: 17px;
   }
 
-  .scrol__scale {
+  .scroll__scale {
     top: 28px;
     left: 42px;
     width: 290px;
     margin: 0;
   }
 
-  .scrol__toggle-crop,
-  .scrol__toggle-fill,
-  .scrol__toggle-contrast {
+  .scroll__toggle-crop,
+  .scroll__toggle-fill,
+  .scroll__toggle-contrast {
     top: 22px;
   }
 
-  .scrol__toggle-crop {
+  .scroll__toggle-crop {
     left: 114px;
   }
 
-  .scrol__toggle-fill {
+  .scroll__toggle-fill {
     left: 290px;
   }
 
-  .scrol__toggle-contrast {
+  .scroll__toggle-contrast {
     left: 203px;
   }
 }
